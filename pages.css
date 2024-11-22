@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+  font-size: 22px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 20px;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.Logo-Txt {
+  margin-top: 10px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 20px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #838383;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+.content {
+  width: 60%;
+  height: auto;
+}
+
+.inner-content-section {
+  width: 100%;
+  padding-right: 20px;
+  background-image: url("assets/Line.png");
+  padding: 40px 80px 0px 80px;
+}
+
+.content-section {
+  padding-top: 40px;
+  width: 70%;
+}
+.title-container {
+  margin-bottom: 40px;
+}
+
+.content-section h1 {
+  font-size: 64.5px;
+  line-height: 87.97px;
+  margin-bottom: 20px;
+}
+.content p {
+  font-size: 15px;
+  line-height: 23.46px;
+  color: #2d3134;
+  margin-bottom: 5px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.bg-img {
+  display: block;
+  width: 55.9px;
+  height: auto;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36.87px; 
+  height: auto;
+}
+.stats-container {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 30px;
+ 
+}
+.stats {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #222;
+  width: 20%;
+}
+
+.stats-number {
+  font-size: 38.7px;
+}
+.stats-img {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.ellipse {
+  width: 70px;
+  height: 70px;
+  margin-left: -30px;
+  z-index: 1;
+}
+.ellipse:first-child {
+  margin-left: 0;
+}
+.buttons {
+  display: flex;
+  justify-content: start;
+  width: 80%;
+  margin-bottom: 65px;
+  gap: 20px;
+  box-shadow: none;
+  border: none;
+}
+
+.book-btn {
+  background-color: #004c3f;
+  color: #fff;
+  border-radius: 60.2px;
+  font-size: 17px;
+  padding: 15px 30px 15px 30px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  box-shadow: none;
+}
+
+.cta-img {
+  width: 150px;
+  height: 46px;
+}
+
+.picture-section {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("assets/Mask\ group.png");
+  background-color: #f1f6fe;
+  gap: 20px;
+
+
+  padding: 45px;
+  height: auto;
+}
+
+.picture-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.footer {
+  background-color: #ff9257;
+  color: #fff;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.footer div {
+  font-size: 40px;
+  font-weight: 500;
+  border-left: 2px solid rgba(238, 230, 138, 0.637);
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.footer span {
+  font-size: 17px;
+ 
+  font-weight: 400;
+}
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .main-content {
+        flex-direction: column;
+        
+      }
+      .content , .picture-section{
+        width: 100%;
+      }
+      .mobile-menu {
+        display: none;
+        cursor: pointer;
+      }
+       
+}
+
+@media (max-width: 768px) {
+  
+ .nav-content {
+    display: none;  
+  }
+  
+  .header-section{
+    justify-content: space-between;
+  }
+  
+  
+  .stats-container ,.buttons{
+   flex-direction: column;
+ }
+ 
+ .inner-content-section{
+    padding: 10px;
+ }
+
+  .mobile-menu {
+    display: block;
+    
+ margin-top: 30px;
+  }
+   .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 3px;
+    background: #004c3f;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0px;
+    width: 250px;
+    z-index: 100;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+  }
+ 
+
+  .nav-menu ul li a {
+    padding: 10px;
+    color: #f1f6fe;
+  }
+ 
+}
